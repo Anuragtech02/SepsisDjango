@@ -1,0 +1,123 @@
+body{
+  /*  background: url(/static/img/tech-health.jpg) no-repeat ;*/
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#bg{
+   /* background: url(/assets/img/health.jpg) no-repeat ;*/
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/*.trans{
+    /*opacity: 0%;
+}*/
+
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.login-logo{
+    width: 75%;
+    position: relative;
+    margin-left: 34%;
+    margin-top: 3vh;
+}
+
+.login-logo img{
+    position: absolute;
+    width: 40%;
+    margin-top: -66.5%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 5%;
+    }
+
+
+
+.login-form-2{
+    padding: 9%;
+    background: #fa8334;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+    margin-left: 23%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media /*for mobile*/screen and (max-width: 768px) {
+
+    /*#content-mobile {display: none;}*/
+    #user-form{ margin-left: 1px;
+                margin-right: 1px;
+    }
+    .login-logo{
+        position: relative;
+        margin-left: 38%;
+        
+    }
+    .login-logo img{
+        position: absolute;
+        width: 40%;
+        margin-top: -38%;
+        background: #282726;
+        border-radius: 4.5rem;
+        padding: 5%;
+    }
+    
+    
+    }
+
+#user-form{
+    -webkit-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
+    box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
+    }
+    @media screen and (max-width: 576px) {
+        #sep{display: none;}
+        
+        }
+@media screen and (min-width: 576px) {
+            #search{display: none;}
+        }
+        
+.btnSubmit:hover.btnForgetPwd:hover,input:hover,.btnForgetPwd:hover,img:hover{
+
+    -webkit-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+}
+.btnSubmit:focus.btnForgetPwd:focus,input:focus,.btnForgetPwd:focus,img:focus{
+    -webkit-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
+}

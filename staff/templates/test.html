@@ -1,0 +1,91 @@
+
+{% load i18n %}
+{% if msg %}
+<script>
+    alert('{{msg}}')
+</script>
+{% endif %}
+<style >
+    h1{text-align: center;
+    color: azure;
+    background-color: cornflowerblue;}
+    body{display: block;
+    margin: 30;}
+    .button {
+  background-color:#f44336;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+.p1{color: red;}
+</style>
+<body>
+    <h1 >SIRS</h1>
+<form method="POST" action=""> 
+    {% csrf_token %}
+    
+    <div>
+        {% trans "Age:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Age}}
+        {% if form.Age.errors %}
+            <div class="p1">{{ form.Age.errors.as_text }}</div> 
+        {% endif %}<hr/>
+    </div>
+    <br>
+    <div>
+   
+        {% trans "Heart Rate:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.HR}}
+        {% if form.HR.errors %}
+            <div  class="p1">{{ form.HR.errors.as_text }}</div> 
+        {% endif %}<hr/>
+    </div> 
+    <br>
+    <div>
+        {% trans "Oximetry Pulse Rate:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.O2Sat}}
+        {% if form.O2Sat.errors %}
+            <div class="p1">{{ form.O2Sat.errors.as_text }}</div> 
+        {% endif %}<hr/><br>
+        
+    </div> 
+    <br>
+    <div>
+        {% trans "Temperature:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Temp}}
+        {% if form.Temp.errors %}
+        <div class="p1">{{ form.Temp.errors.as_text }}</div> 
+    {% endif %}<hr/>
+    </div>
+    <br> 
+    <div>
+        {% trans "Systolic Blood Pressure:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.SBP}}
+        {% if form.SBP.errors %}
+            <div class="p1">{{ form.SBP.errors.as_text }}</div> 
+        {% endif %}<hr/>
+
+    </div> 
+    <br>
+    <div>
+        {% trans "Diastolic Blood Pressure:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.DBP}}
+        {% if form.DBP.errors %}
+            <div class="p1">{{ form.DBP.errors.as_text }}</div> 
+        {% endif %}<br><hr/></div>
+    </div> 
+    <br>
+    <div>
+       
+        {% trans "Respiration Rate:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Resp}}
+        {% if form.Resp.errors %}
+            <div class="p1">{{ form.Resp.errors.as_text }}</div> 
+        {% endif %}
+        <hr/>
+    </div> 
+    get your report on msg 
+    enter mobile no. <input type="number" name="no"  placeholder="+91 97845****12" required>
+    
+<input class="button" type="submit" value="submit"/>
+</form>
+
+</body>

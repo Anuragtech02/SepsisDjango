@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-18 10:07+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\patient\templates\signIn.html:15
+msgid "Patient-Login-Sepsis"
+msgstr "रोगी लॉग-पूति"
+
+#: .\patient\templates\signIn.html:46 .\patient\templates\signup.html:55
+#: .\sepsis\templates\home.html:53 .\staff\templates\docsignIn.html:45
+#: .\staff\templates\docsignIn.html:85
+msgid "Doctor"
+msgstr "चिकित्सक"
+
+#: .\patient\templates\signIn.html:49 .\patient\templates\signIn.html:62
+#: .\patient\templates\signup.html:58 .\patient\templates\signup.html:71
+#: .\sepsis\templates\home.html:56 .\sepsis\templates\home.html:69
+#: .\staff\templates\docsignIn.html:48 .\staff\templates\docsignIn.html:61
+#: .\staff\templates\docsignIn.html:72 .\staff\templates\docsignup.html:52
+#: .\staff\templates\s.html:32
+msgid "Login"
+msgstr "लॉग इन करें"
+
+#: .\patient\templates\signIn.html:51 .\patient\templates\signIn.html:64
+#: .\patient\templates\signup.html:60 .\patient\templates\signup.html:73
+#: .\patient\templates\signup.html:83 .\sepsis\templates\home.html:58
+#: .\sepsis\templates\home.html:71 .\staff\templates\docsignIn.html:50
+#: .\staff\templates\docsignIn.html:63 .\staff\templates\docsignup.html:56
+#: .\staff\templates\docsignup.html:64 .\staff\templates\s.html:35
+msgid "Registration"
+msgstr "पंजीकरण"
+
+#: .\patient\templates\signIn.html:59 .\patient\templates\signup.html:68
+#: .\sepsis\templates\home.html:66 .\staff\templates\docsignIn.html:58
+#: .\staff\templates\s.html:67
+msgid "Patient"
+msgstr "मरीज़"
+
+#: .\patient\templates\signIn.html:73 .\patient\templates\signup.html:82
+#: .\sepsis\templates\home.html:80 .\staff\templates\docsignIn.html:71
+#: .\staff\templates\docsignup.html:63
+msgid "Home"
+msgstr "होम पेज"
+
+#: .\patient\templates\signup.html:15
+#, fuzzy
+#| msgid "Patient-Login-Sepsis"
+msgid "Patient-Registration-Sepsis"
+msgstr "रोगी लॉग-पूति"
+
+#: .\patient\templates\signup.html:38 .\sepsis\templates\home.html:39
+#: .\staff\templates\docsignIn.html:36 .\staff\templates\docsignup.html:38
+#: .\staff\templates\s.html:25
+msgid "SLAY-SEPSIS"
+msgstr "मारें-पूति"
+
+#: .\patient\templates\signup.html:95
+msgid "Name"
+msgstr "नाम:"
+
+#: .\patient\templates\signup.html:99 .\staff\templates\docsignup.html:87
+msgid "This should be your name."
+msgstr "यह आपका नाम होना चाहिए।"
+
+#: .\patient\templates\signup.html:106
+msgid "Username"
+msgstr "उपयोगकर्ता नाम"
+
+#: .\patient\templates\signup.html:108
+msgid " Please enter a valid username."
+msgstr "कृपया वैध उपभोगकर्ता नाम डाले"
+
+#: .\patient\templates\signup.html:109
+msgid " Please enter your Email."
+msgstr "अपना ईमेल दर्ज करें।"
+
+#: .\patient\templates\signup.html:112 .\staff\templates\docsignup.html:100
+msgid "Password"
+msgstr "कुंजिका"
+
+#: .\patient\templates\signup.html:114
+msgid " Please enter a valid password."
+msgstr "कृपया एक वैध पासवर्ड दर्ज करें।"
+
+#: .\patient\templates\signup.html:115
+msgid " Please enter your password."
+msgstr "अपना पासवर्ड दर्ज करें।"
+
+#: .\patient\templates\signup.html:121
+msgid "Gender"
+msgstr "लिंग:"
+
+#: .\patient\templates\signup.html:123
+msgid "Male"
+msgstr "पुरुष"
+
+#: .\patient\templates\signup.html:124
+msgid "Female"
+msgstr "महिला"
+
+#: .\patient\templates\signup.html:125
+msgid "I don't want to disclose"
+msgstr "मैं खुलासा नहीं करना चाहता"
+
+#: .\patient\templates\signup.html:127
+msgid " Please enter your Gender."
+msgstr "कृपया अपना जेंडर डालें।"
+
+#: .\patient\templates\signup.html:131
+msgid "Mobile Number"
+msgstr "फोन नंबर:"
+
+#: .\patient\templates\signup.html:133
+msgid " Please enter your Contact number."
+msgstr "कृपया अपना संपर्क नंबर दर्ज करें।"
+
+#: .\patient\templates\signup.html:142
+msgid "Accept Terms"
+msgstr "शर्तों को स्वीकारें"
+
+#: .\patient\templates\signup.html:142
+msgid "Conditions"
+msgstr "शर्तेँ"
+
+#: .\patient\templates\signup.html:148 .\staff\templates\docsignup.html:119
+msgid "Submit"
+msgstr "प्रस्तुत"
+
+#: .\patient\templates\welcome.html:6
+msgid "Title"
+msgstr "शीर्षक"
+
+#: .\patient\templates\welcome.html:18
+msgid "Logout"
+msgstr "लॉग आउट"
+
+#: .\patient\templates\welcome.html:20 .\staff\templates\docwelcome.html:20
+msgid "Welcome"
+msgstr "स्वागत हे"
+
+#: .\sepsis\templates\home.html:9
+msgid "Slay-Sepsis"
+msgstr "मारें-पूति"
+
+#: .\sepsis\templates\home.html:119
+msgid "Slay Sepsis"
+msgstr "पूति का खात्मा"
+
+#: .\sepsis\templates\home.html:126
+msgid "PREVENTIONS"
+msgstr "निवारण"
+
+#: .\sepsis\templates\home.html:127
+msgid "CURE"
+msgstr "इलाज"
+
+#: .\sepsis\templates\home.html:128
+msgid "SIRS"
+msgstr "SIRS"
+
+#: .\sepsis\templates\home.html:129
+msgid "SOFA"
+msgstr "SOFA"
+
+#: .\staff\templates\docsignIn.html:92
+#, fuzzy
+#| msgid "Password"
+msgid "Your Password"
+msgstr "कुंजिका"
+
+#: .\staff\templates\docsignIn.html:98 .\staff\templates\s.html:59
+#: .\staff\templates\s.html:80
+msgid "Forget Password?"
+msgstr "पासवर्ड भूल गए?"
+
+#: .\staff\templates\docsignup.html:76
+msgid "Employment Number"
+msgstr "रोजगार संख्या"
+
+#: .\staff\templates\docsignup.html:78
+msgid "Please enter your Employment number."
+msgstr "कृपया अपना रोजगार नंबर दर्ज करें"
+
+#: .\staff\templates\docsignup.html:83
+msgid "Firstname"
+msgstr "पहला नाम"
+
+#: .\staff\templates\docsignup.html:94
+msgid "Email"
+msgstr "ईमेल:"
+
+#: .\staff\templates\docsignup.html:96
+msgid "Please enter a valid username."
+msgstr "कृपया वैध उपभोगकर्ता नाम डाले।"
+
+#: .\staff\templates\docsignup.html:105
+msgid "Confirm-Password"
+msgstr "पासवर्ड की पुष्टि कीजिये:"

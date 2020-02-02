@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+@media screen and (max-width: 576px) {
+    #sep{display: none;}
+
+    body{
+        background: url(/img/gen-bg1.png) no-repeat ;
+        min-height: calc(100vh- 138px);
+        background-size: cover;
+        background-position: right;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    }
+
+    .title{
+        -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        border-radius: 40px;
+        font-size: 3.1rem;
+        margin-bottom: 35px !important;
+    }
+    .under{
+        border: 2px solid #543ee4c0 ;
+    }
+    .ban-btn:hover{
+        background-color: #8377d1 ;
+        border-radius: 30px;
+        color: #ffffff;
+        font-weight: 550;
+            
+    }
+    /*.max-height{
+        min-height: 60vh;
+        background: url("/img/gen-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }*/
+    
+    
+@media screen and (min-width: 576px) {
+        #search{display: none;}
+    
+    }
+
+
+@media screen and (min-width:768px){
+footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
+    position: relative;
+    
+}
+}
+#NAVBAR{
+    position: sticky;
+}
+/*-------*-*-*-*-*-*-*-*-*-------------*/
+/*.max-height{
+    min-height:calc(100vh - 138px);
+    background: url("/img/gen-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}*/
+
+
+.text-purp{
+    color: #060127 ;
+    font-weight: 550;
+    font-size: large;
+}
+.bg-grn{
+    background-color: #24ff66;
+}
+.ban-btn{
+    min-width: 135px;
+    padding:3px;
+    border:2px solid #000000;
+    opacity: 80%;
+    border-radius: 0 ;
+    -webkit-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+    text-decoration: none;
+
+}
+
+/*
+.ban-btn:hover{
+    background-color: #8377d1 ;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 550;
+    
+}*/
+.ban-btn>a{
+    text-decoration: none;
+}
+
+/*#pre{
+    min-width: 145px;
+}*/
+.under{
+    width: 300px;
+    height: 8px;
+    /*border-radius: 6px;*/
+    -webkit-box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
+
+}
+.bg-purp{
+    background-color: rebeccapurple ;
+    align-content: center;
+    
+}
+.title{
+    border-radius: 40px;
+
+}
+.title > strong{
+    -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+    border-radius: 40px;
+
+}
+
+
+@media screen and (min-width: 576px){
+
+    .banner-link{width:100% ;}
+
+    .ban-btn{
+        min-width: 110px;
+        padding:2px;
+        border:2px solid #000000;
+        opacity: 75%;
+        border-radius: 0 ;
+        -webkit-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+        box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
+        text-decoration: none;
+    
+    }
+    .ban-btn>a{
+        text-decoration: none;
+
+    }
+
+
+    .title > strong{
+        -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        border-radius: 40px;
+
+    }
+    .ban-btn:hover{
+        background-color: #8377d1 ;
+        border-radius: 40px;
+        color: #ffffff;
+        font-weight: 550;
+        
+    }
+    .max-height{
+        min-height:calc(100vh - 138px);
+        background: url("/img/gen-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+}
+
+.slide-and-fade-and-spin {
+    @include mui-animation(slide, fade, spin(120deg));
+  }

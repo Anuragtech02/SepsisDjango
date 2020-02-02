@@ -1,0 +1,174 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prevention-Sepsis</title>
+
+    <!--******BOOTSTRAP CSS**********************************************-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--******CUSTOM CSS**********************************************-->
+    <link rel="stylesheet" href="{% static '/css/prevention.css' %}">
+
+    <!--*******FAVICON**********************************************-->
+    <link rel="icon" href="{% static '/img/favicon.ico' %}">
+
+    <!--*****FONT AWESOME**********************************************-->
+    <link rel="stylesheet" href="{% static '/css/all.css' %}">
+    <!--END OF HEAD**************************************************************************************-->
+</head>
+
+<body>
+
+    <!--BODY-->
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3">
+        <a href="#" class="navbar-brand"><img src="{% static '/img/favicon512.png' %}" alt="BrandLogo" width="48px"
+                height="auto" />&nbsp; SLAY-SEPSIS</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-right" id="navbarMenu">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item mx-3 dropdown">
+                    <a class="btn text-secondary font-weight-bold " type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Doctor
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button type="button" onclick="location.href='{% url 'signIn' %}'" class="dropdown-item">
+                            Login</button>
+                        <div class="dropdown-divider"></div>
+                        <button type="button" onclick="location.href='{% url 'signup' %}'" class="dropdown-item">
+                            Registration</button>
+                    </div>
+                </li>
+                <li class="nav-item" id="sep"> <a href="#" class="nav-link">|</a></li>
+                <li class="nav-item mx-3 dropdown">
+                    <a class="btn  text-secondary font-weight-bold " type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Patient
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button type="button" onclick="location.href='{% url 'patsignIn' %}'" class="dropdown-item">
+                            Login</button>
+                        <div class="dropdown-divider"></div>
+                        <button type="button" onclick="location.href='{% url 'patsignup' %}'" class="dropdown-item">
+                            Registration</button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><button type="button" onclick="location.href='{% url 'hom' %}'"  >{% trans "Home" %}</button></li>
+
+                <li class="breadcrumb-item active" aria-current="page"> Prevention</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class=" bg-i"></div>
+    <div class="container-fluid px-0" style="height: 242vh;">
+        <div class="vid" style="position: sticky; top:10px;">
+            <video class=" " width="63%" controls autoplay>
+                <source src="{% static 'video/prevention.mp4' %}" type="video/mp4">
+                </source>
+            </video>
+        </div>
+        <div class=" col-sm-4   lead p-2 mx-3 content overflow-auto wrapper" style="right: 1%;">
+            <ul class=" font-weight-normal  ">
+                <h3 class="display-4">Fact-Points & Prevention</h3>
+                <li>Any human with <b>weak immune</b> is prone to Sepsis. </li>
+                <ul>
+                    <li>Major victims are <b> Infants</b> and <b>Senior Citizens</b> but list doesn't ends here, any
+                        person who has been to <b>ICU</b> or got an <b>Organ Transplant</b> recently may get victimised.
+                    </li>
+                    <ul>
+                        <li><b>People Highest on Risk are:</b></li>
+                        <li>Infants</li>
+                        <li>Children</li>
+                        <li>Any Person who's not given proper vaccination in childhood </li>
+                        <li>Any Person with Serious Injuries</li>
+                        <li>Any Person maintaining unhygienic environment around private-parts</li>
+                        <li>People with Diabetes</li>
+                        <li>People with Cancer</li>
+                        <li>People on immuno-suppresin drug </li>
+                        <li>People with AIDS</li>
+                        <li>Any person who got an Organ Transplant, especially in past 6-8 months </li>
+                        <li>Members of any group with Unhygienic Habits/Environments</li>
+                        <li>etc... </li>
+                    </ul>
+                </ul>
+                <li>Vaccination can be a HUGE Prevention for Sepsis
+                    <ul>
+                        <li>
+                            Diseases that used be in common in our country and around the world including <br> > Polio
+                            <br> > Measles <br> > Diphtheria <br> > Rubella <br> > Mumps <br> > Tetanus <br> > Rotavirus
+                            <br> etc... <br>
+                            can now be <b>prevented</b> easily by vaccination.So, stay Up-to-Date with Vaccinations <br>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <button class="btn btn-warning btn-block" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <h3>Vaccination Schedule </h3>
+                        </button>
+                        <div class="dropdown-menu btn btn-outline-success" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item bg-light border border-primary btn font-weight-bold"
+                                href="/static/pdf/india-schedule.pdf">
+                                <h4> INDIA</h4>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item btn bg-light " href="/static/pdf/us-schedule.pdf">
+                                <h4> United States of America</h4>
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+                <li>Proper Hygiene is the <strong>Key</strong></li>
+                <li>Seek Treatment for possible infections </li>
+                <li>Take <b> Antibiotics as Directed</b> by the Doctor </li>
+                <li>Take Proper care of Wounds </li>
+                <li>Use of sanitary pads while in periods instead of cloth</li>
+                <li>Avoid intake of immune weakening drugs</li>
+                <ul>
+                    <li><b>For example:</b></li>
+                    <li>Oral corticosteriods <br> > Budesonide <br> > Dexamethasone <br>etc...</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <!--BG-ENDS-->
+
+    <!--~~~~~~~~~~~~~~~FOOTER-HERE~~~~~~~~~~~~-->
+    <footer class=" text-center bg-dark text-light p-4">
+        <p>@CopyRight 2020 SIH SourceDeCode</p>
+    </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html> 

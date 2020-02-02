@@ -1,0 +1,13 @@
+@media screen and (max-width: 576px) {
+    #sep{display: none;}
+    
+    }
+@media screen and (min-width: 576px) {
+        #search{display: none;}
+    
+    }
+footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
+    position: relative;
+    top: 70vh;
+}
+/*-------*-*-*-*-*-*-*-*-*-------------*/

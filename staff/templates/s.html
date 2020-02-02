@@ -1,0 +1,86 @@
+{% load i18n %}
+{% if msg %}
+<script>
+    alert('{{msg}}')
+</script>
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sepsis Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/img/favicon.ico" >
+</head>
+
+<body>
+    <!--BODY-->
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">{% trans "SLAY-SEPSIS" %}</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-right" id="navbarMenu">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <button type="button"  onclick="location.href='{% url 'signIn' %}'" class="nav-link">{% trans "Login" %}</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" onclick="location.href='{% url 'signup' %}'">{% trans "Registration" %}</button>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+<!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
+<!--LOGIN FORM-->
+    
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <h3 class="display-3">Doctor</h3>
+            
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Email" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit btn btn-primary" value="Login" />
+                </div>
+                <div class="form-group">
+                    <a href="#" class="btnForgetPwd btn" value="NA-Login">{% trans "Forget Password?" %}</a>
+                </div>
+            
+        </div>
+        <div class="col-md-6 login-form-2">
+            <div class="login-logo" id="content-desktop">
+                <img src="/img/favicon.ico" alt=""/>
+            </div>
+            <h3 class="display-3">{% trans "Patient" %}</h3>
+            <form action="/postsign/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Email" value="" name="email" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password" value="" name="passw"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit btn btn-primary" value="Login" />
+                </div>
+                <div class="form-group">
+                    <a href="#" class="btnForgetPwd btn " value="NA-Login">{% trans "Forget Password?" %}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

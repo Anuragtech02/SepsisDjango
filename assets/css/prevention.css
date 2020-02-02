@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+.bg-i{
+    background: url(/static/img/tech-health.jpg) no-repeat ;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    position: absolute;
+}
+.vid > video{
+    position:sticky;
+    top:5;
+    left:1%;
+    border: #000000 solid;
+    border-width: 11%;
+}
+.content{
+    top: 20.75%;
+    right: 1%;
+    position: absolute;
+    border: #000000 solid;
+    border-width: 8px;
+    height: 240vh;
+}
+footer{
+    top: 250vh;
+}
+.wrapper{
+    width:1000px; 
+    overflow:scroll; 
+    position:absolute   ;
+}
