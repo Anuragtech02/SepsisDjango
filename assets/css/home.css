@@ -42,6 +42,15 @@ nav{
   align-items: center;
   flex-direction: column;
   list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  transform: translateY(10px);
+}
+
+.doctor button:hover + ul, .patient button:hover + ul{
+  opacity: 1;
+  pointer-events: all;
 }
 
 .doctor a, .patient a {
@@ -63,7 +72,7 @@ nav{
 }
 
 .doctor li:hover, .patientn li:hover {
-  
+  background-color:  #7115AC;
 }
 
 .headerSepsis{
