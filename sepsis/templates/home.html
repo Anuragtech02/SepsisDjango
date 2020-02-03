@@ -2,148 +2,126 @@
 {% load i18n %}
 {% if msg %}
 <script>
-    alert('{{msg}}')
+  alert('{{msg}}')
 </script>
 {% endif %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{% trans "Slay-Sepsis" %}</title>
 
-    <!--BOOTSTRAP CSS**********************************************-->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    
-    <!--UI-->
-<link rel="stylesheet" href="{% static '/css/motion-ui.min.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{% trans "Slay-Sepsis" %}</title>
 
-    <!--CUSTOM CSS**********************************************-->
-    <link rel="stylesheet" href="{% static '/css/home.css' %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--BOOTSTRAP CSS**********************************************-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <!--FAVICON**********************************************-->
-    <link rel="icon" href="{% static '/img/favicon.ico' %}" />
 
-    <!-- font awesome********************************************** -->
-    <link rel="stylesheet" href="{% static '/css/all.css' %}" />
-    <!--END OF HEAD**************************************************************************************-->
-  </head>
+  <!--CUSTOM CSS**********************************************-->
+  <link rel="stylesheet" href="{% static '/css/home.css' %}" />
 
-  <body>
-    <!--BODY-->
-  
-    
+  <!--FAVICON**********************************************-->
+  <link rel="icon" href="{% static '/img/favicon.ico' %}" />
+
+  <!-- font awesome********************************************** -->
+  <link rel="stylesheet" href="{% static '/css/all.css' %}" />
+  <!--END OF HEAD**************************************************************************************-->
+</head>
+
+<body>
+  <!--BODY-->
+
+
 
   <div class="navbar">
     <div class="logo">
-      <img src="{% static '/favicon.ico' %}" style="width: 100%;">
-  </div>
-  <a href="#home">Home</a>
-  <div class="dropdown">
-    <button  class="dropbtn1">Doctor 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Login</a>
-      <a href="#">Register</a>
+      <h3>SEPSIS</h3>
     </div>
-  </div> 
-
-  <div class="dropdown">
-    <button  class="dropbtn1">Patient 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Login</a>
-      <a href="#">Register</a>
-    </div>
-  </div> 
-</div>
-    <form action="{% url 'set_language'%}"  method="POST">{% csrf_token%} 
-      <input type="hidden" name="next" value="{{redirect_to}}">
-      <select name="language" id="">
-          {% get_available_languages as LANGUAGES%}
-          {% get_language_info_list for LANGUAGES as languages%}
-          {% for language in languages%}
-              <option value="{{language.code}}" {% if language.code == LC %} selected {% endif %}>
-                  {{language.name_local}} 
-              </option>
-          {% endfor %}
-  
-      </select>
-      <input type="submit" value="go">
-  </form>
-    <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
-    <!--BANNER , BRUCE BANNER-->
-
- 
-<section>
-          <h1 class="headerSepsis ">
-            <strong class=" px-3 py-1 ">{% trans "Slay Sepsis" %} </strong> 
-          </h1>
-
-          <div class="containerCard">
-            <div class="cardPrevention">
-              <img src="{% static '/img/Bacteria.svg' %}" alt="Prescription" style="width:100%">
-              <div class="containerPrevention">
-                <h4><a href="prevention>"<b>{% trans "PREVENTIONS" %}</b></a></h4>
-              </div>
-            </div>
-
-            <div class="cardCure">
-              <img src="{% static '/img/medicalPrescription.svg' %}" alt="cure" style="width:100%">
-              <div class="containerCure">
-                <h4><a href="#>"<b>{% trans "CURE" %}</b></a></h4>
-              </div>
-            </div>
-
-            <div class="cardSirs">
-              <img src="{% static '/img/Bacteria.svg' %}" alt="sirs" style="width:100%">
-              <div class="containerSirs">
-                <h4><a href="#>"<b>{% trans "SIRS" %}</b></a></h4>
-              </div>
-            </div>
-
-            <div class="cardSofa">
-              <img src="{% static '/img/list.svg' %}" alt="cure" style="width:100% ;">
-              <div class="containerSofa">
-                <h4><a href="#>"<b>{% trans "PATIENT LIST" %}</b></a></h4>
-              </div>
-            </div>
+    <div class="containerNav">
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Doctor
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
         </div>
+      </div>
 
-</section>
-    <!--END OF BANNER-->
+      <div class="dropdown">
+        <button class="dropbtn">Patient
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="{% url 'set_language'%}" method="POST">{% csrf_token%}
+    <input type="hidden" name="next" value="{{redirect_to}}">
+    <select name="language" id="">
+      {% get_available_languages as LANGUAGES%}
+      {% get_language_info_list for LANGUAGES as languages%}
+      {% for language in languages%}
+      <option value="{{language.code}}" {% if language.code == LC %} selected {% endif %}>
+        {{language.name_local}}
+      </option>
+      {% endfor %}
 
-    <!--~~~~~~~~~~~~~~~FOOTER-HERE~~~~~~~~~~~~-->
-    <footer class="footer text-center bg-dark text-light foot p-4">
-      <p> © CopyRight 2020 SIH SourceDeCode</p>
-    </footer>
-    <!--****************DON'T TOUCH THIS***************************************-->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    </select>
+    <input type="submit" value="go">
+  </form>
+  <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
+  <!--BANNER , BRUCE BANNER-->
 
-    <script src="{% static '/js/registration.js' %}"></script>
-  </body>
+
+  <section>
+    <h1 class="headerSepsis ">
+      <strong class=" px-3 py-1 ">{% trans "Slay Sepsis" %} </strong>
+    </h1>
+
+    <div class="containerCard">
+      <div class="cardPrevention">
+        <img src="{% static '/img/Bacteria.svg' %}" alt="Prescription" style="width:100%">
+        <div class="containerPrevention">
+          <h4><a href="prevention>" <b>{% trans "PREVENTIONS" %}</b></a></h4>
+        </div>
+      </div>
+
+      <div class="cardCure">
+        <img src="{% static '/img/medicalPrescription.svg' %}" alt="cure" style="width:100%">
+        <div class="containerCure">
+          <h4><a href="#>" <b>{% trans "CURE" %}</b></a></h4>
+        </div>
+      </div>
+
+      <div class="cardSirs">
+        <img src="{% static '/img/Bacteria.svg' %}" alt="sirs" style="width:100%">
+        <div class="containerSirs">
+          <h4><a href="#>" <b>{% trans "SIRS" %}</b></a></h4>
+        </div>
+      </div>
+
+      <div class="cardSofa">
+        <img src="{% static '/img/list.svg' %}" alt="cure" style="width:100% ;">
+        <div class="containerSofa">
+          <h4><a href="#>" <b>{% trans "PATIENT LIST" %}</b></a></h4>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--END OF BANNER-->
+
+  <div class="footer">
+    <p>© Copyright 2020 SourceDecode SIH</p>
+  </div>
+
+</body>
+
 </html>
