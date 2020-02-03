@@ -85,34 +85,27 @@
       <strong class=" px-3 py-1 ">{% trans "Slay Sepsis" %} </strong>
     </h1>
 
-    <div class="containerCard">
-      <div class="cardPrevention">
-        <img class="imgPrevention" src="{% static '/img/medicalPrescription.svg' %}" alt="Prescription" style="width:60%">
-        <div class="containerPrevention">
-          <h4><a href="prevention>" <b>{% trans "PREVENTIONS" %}</b></a></h4>
+      <div class="row">
+    <div id="Prescription" class="column">
+      <div class="card">
+        <img class="imgPrevention" src="{% static '/img/medicalPrescription.svg' %}" alt="Prescription" style="width:42%">
         </div>
-      </div>
-
-      <div class="cardCure">
-        <img class="imgCure" src="{% static '/img/cure.svg' %}" alt="cure" style="width:100%">
-        <div class="containerCure">
-          <h4><a href="#>" <b>{% trans "CURE" %}</b></a></h4>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img class="imgCure" src="{% static '/img/cure.svg' %}" alt="cure" style="width:40%">
         </div>
-      </div>
-
-      <div class="cardSirs">
-        <img class="imgSirs" src="{% static '/img/Bacteria.svg' %}" alt="sirs" style="width:100%">
-        <div class="containerSirs">
-          <h4><a href="#>" <b>{% trans "SIRS" %}</b></a></h4>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img class="imgSirs" src="{% static '/img/Bacteria.svg' %}" alt="sirs" style="width:48%">
         </div>
-      </div>
-
-      <div class="cardSofa">
-        <img class="imgSofa" src="{% static '/img/list.svg' %}" alt="cure" style="width:70% ;">
-        <div class="containerSofa">
-          <h4><a href="#>" <b>{% trans "PATIENT LIST" %}</b></a></h4>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img class="imgSofa" src="{% static '/img/list.svg' %}" alt="cure" style="width:45% ;">
         </div>
-      </div>
+     </div>
     </div>
 
   </section>
