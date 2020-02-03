@@ -27,6 +27,7 @@
 
     <!--CUSTOM CSS**********************************************-->
     <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--FAVICON**********************************************-->
     <link rel="icon" href="{% static '/img/favicon.ico' %}" />
@@ -39,30 +40,33 @@
   <body>
     <!--BODY-->
   
-    <nav>
-      <div class="logo">
-        <h4>{% trans "SLAY-SEPSIS" %}</h4>
-      </div>
-      <div class="dropdown">
-        <button><a href="#" class="home">HOME</a></button>
-        <div class="doctor">
-          <button>DOCTOR</button>
-            <ul>
-              <li><a href="#">LOGIN</a></li>
-              <li><a href="#">REGISTRATION</a></li>
-            </ul>
-        </div>
-        <div class="patient">
-          <button>PATIENT</button>
-            <ul>
-              <li><a href="#">LOGIN</a></li>
-              <li><a href="#">REGISTRATION</a></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
+    
 
+  <div class="navbar">
+    <div class="logo">
+      <img src="{% static '/favicon.ico' %}" style="width: 100%;">
+  </div>
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button  class="dropbtn1">Doctor 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </div>
+  </div> 
 
+  <div class="dropdown">
+    <button  class="dropbtn1">Patient 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </div>
+  </div> 
+</div>
     <form action="{% url 'set_language'%}"  method="POST">{% csrf_token%} 
       <input type="hidden" name="next" value="{{redirect_to}}">
       <select name="language" id="">
