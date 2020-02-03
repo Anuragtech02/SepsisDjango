@@ -29,15 +29,23 @@ body {
 .containerCard{
     display: flex;
     justify-content: space-around;
-    align-content: center;
 }
 
+.imgPrevention{
+  margin-left: 30px;
+}
+.imgcure{
+  margin:auto;
+}
+
+
 .cardPrevention {
-   
+    padding:30px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
+    align-content: center;
   }
   
   
@@ -51,6 +59,9 @@ body {
 
   .cardSofa {
    
+    padding-left:60px;
+    padding-right:20px;
+    padding-top:25px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -58,7 +69,7 @@ body {
   }
   
   .cardCure {
-    padding:30px;
+    padding:50px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -66,7 +77,9 @@ body {
   }
   
   .cardSirs {
-  
+    padding-right:100px;
+    padding-left:60px;
+    
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
