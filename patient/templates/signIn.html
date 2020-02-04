@@ -9,6 +9,7 @@
 <html lang="en">
 
 <head>
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,47 +34,34 @@
     
     <!--BODY-->
     <!--NAVIGATION BAR-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3">
-        <a href="#" class="navbar-brand"><img src="{% static '/img/favicon512.png' %}" alt="BrandLogo" width="48px" height="auto"/>&nbsp; {% trans "SLAY-SEPSIS" %}</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-            <span class="navbar-toggler-icon"></span>
+    <div class="navbar">
+    <div class="logo">
+      <h3>SEPSIS</h3>
+    </div>
+    <div class="containerNav">
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Doctor
+          <i class="fa fa-caret-down"></i>
         </button>
-        <div class="collapse navbar-collapse nav-right" id="navbarMenu">
-            <ul class="navbar-nav ml-auto ">
-                <li class="nav-item mx-3 ">
-                    <div class="dropdown color_">
-                        <a class="btn text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <p class="font-weight-bolder color_">{% trans "Doctor" %}</p>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button type="button" onclick="location.href='{% url 'signIn' %}'" class="dropdown-item" >{% trans "Login" %}</button>
-                        <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'signup' %}'" class="dropdown-item" >{% trans "Registration" %}</button>
-                        </div>
-                      </div>
-                </li>
-                <li class="nav-item" id="sep"> <a href="#" class="nav-link">|</a></li>
-                <li class="nav-item mx-3 ">
-                    <div class="dropdown color_">
-                        <a class="btn color_ text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="font-weight-bolder color_">{% trans "Patient"%}</p>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button type="button" onclick="location.href='{% url 'patsignIn' %}'" class="dropdown-item">{% trans "Login" %}</button>
-                        <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'patsignup' %}'" class="dropdown-item" >{% trans "Registration" %}</button>
-                        </div>
-                      </div>
-                </li>
-            </ul>
+        <div class="dropdown-content">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
         </div>
-    </nav><div >
-    <nav  aria-label="breadcrumb" >
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><button type="button" onclick="location.href='{% url 'hom' %}'"  >{% trans "Home" %}</button></li>
-          <li class="breadcrumb-item active" aria-current="page">{% trans "Login" %}</li>
-        </ol>
-      </nav >
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Patient
+          <i  class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content dropdown-content-p">
+          <a href="patient/sign">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
       
 <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
 <!--LOGIN FORM-->

@@ -1,5 +1,7 @@
 body {
-  background-color: white;
+  background-image: linear-gradient(#417EB0, #5354A0);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   
 }
@@ -7,7 +9,10 @@ body {
 .headerSepsis{
     font-size: 60p  x;
     display:flex;
-    margin-left: 0px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: white;
 }
 
 .logo{
@@ -17,19 +22,19 @@ body {
 
 .footer{
 
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  width:100%;
   background-color: rgb(66, 66, 66);
   color: white;
   padding: 20px;
+  padding-right: 0px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+
 }
 
-.containerCard{
-    display: flex;
-    justify-content: space-around;
-}
 
 .imgPrevention{
   margin-left: 30px;
@@ -37,18 +42,6 @@ body {
 .imgcure{
   margin:auto;
 }
-
-
-.cardPrevention {
-    padding:30px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; 
-    align-content: center;
-    padding-top: 70px;
-  }
-  
   
   .cardPrevention:hover, .cardSofa:hover, .cardCure:hover, .cardSirs:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -59,45 +52,6 @@ body {
     padding: 2px 16px;
   }
 
-  .containerSofa{
-
-    margin-left: -28px;
-    padding-top:20px;
-  }
-  .card
-  {
-    align-content:center;
-  }
-
-  .cardSofa {
-  
-    padding-left:60px;
-    padding-right:20px;
-    padding-top:60px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; 
-  }
-  
-  .cardCure {
-    padding:50px;
-    background-color: #ffffff;
-    padding-top:60px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; 
-  }
-
-  .cardSirs {
-    align-content: center;
-    padding: 50px;
-    padding-top: 70px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; 
-  }
   
   
   /* Float four columns side by side */
@@ -108,18 +62,25 @@ body {
 
 }
 #Prescription{
-  margin-left: 10px;
+  margin-left: 60px;
+}
+
+.imgPrevention{
+  margin:auto;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
 .row 
 {
   margin: 0 -5px; 
+  margin-top: 50px;
   align-items:center;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  padding-bottom: 100px;
 }
+
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -134,13 +95,22 @@ body {
   padding: 20px;
   align-items: center;
   text-align: center;
-  background-color: white;
+  transition:0.3s;
 }
 
+.card a {
+  margin-top:15px;
+  text-align: center;
+  color : black;  
+  text-decoration: none;
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
   .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 3px 8px 0 #b8b8b8 ;
+    background-color: white;
     display: flex;
    
     
@@ -176,10 +146,9 @@ body {
     font-family: inherit;
     margin: 0;
   }
- 
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color:  rgb(68, 159, 233);
   }
   
   .dropdown-content {
@@ -190,6 +159,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
+
   
   .dropdown-content a {
     float: none;
@@ -210,11 +180,24 @@ body {
     display:block;
   }
 
+  .languageSelect{
+    display: flex;
+   background-color: white;
+   box-shadow:  0 3px 8px 0 #b8b8b8;
+   padding: 10px;
+  }
+
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
       display: block;
       margin-bottom: 20px;
     }
-  }
-  
+    .navbar{
+      width: 100%;
+      display: flex;
+      position: fixed;
+      margin-top: 0px;
+      z-index: 100;
+    }
+}

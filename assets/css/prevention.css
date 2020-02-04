@@ -1,38 +1,178 @@
-*{
-    margin: 0;
-    text-decoration: none;
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+body{
+   background-color: white;
 }
 
-.bg-i{
-    background: url(/static/img/tech-health.jpg) no-repeat ;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(3px);
-    position: absolute;
+.headerSepsis{
+    font-size: 60p  x;
+    display:flex;
+    margin-left: 0px;
 }
-.vid > video{
-    position:sticky;
-    top:5;
-    left:1%;
-    border: #000000 solid;
-    border-width: 11%;
+
+.logo{
+  display: flex;
+  margin-left: 0px;
 }
-.content{
-    top: 20.75%;
-    right: 1%;
-    position: absolute;
-    border: #000000 solid;
-    border-width: 8px;
-    height: 240vh;
+
+.subPrescription{
+    font-family: 'Roboto' ,sans-serif;
 }
-footer{
-    top: 250vh;
+
+.footer{
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+
+.vid{
+    display:flex;
+    justify-content: center;
+}
+video{
+    width: 35%;
+    height:25%;
+    margin-top: 6%;
 }
 .wrapper{
-    width:1000px; 
-    overflow:scroll; 
-    position:absolute   ;
+    background-image: url(/static/img/preventionBG6.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -4px;
+    margin-top: -4px;
 }
+
+.textWrap{
+    margin-left: 50px;
+}
+
+.textWrap h2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding-top:120px;
+    display: flex;
+    letter-spacing: 3px;
+    width: 35%;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.textWrap ul  {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    display: block;
+    align-items: left;
+    width:40%;
+    text-align: left;
+    padding-bottom:140px;
+}
+.textvideoright{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin-top: 30px;
+    font-size: 20px;
+    display: block;
+    align-items: left;
+    width:40%;
+    text-align: left;
+    padding-bottom:140px;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 3px 8px 0 #363636 ;
+    display: flex;
+  }
+
+  .containerNav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right : 0;
+  }
+  
+  .navbar a {
+    float: right;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: right;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(68, 159, 233);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    display:block;
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
+
+  .languageSelect{
+    display: flex;
+   padding: 10px;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .navbar{
+      width: 100%;
+      display: flex;
+      position: fixed;
+      margin-top: 0px;
+      z-index: 100;
+    }
+}
+
+
