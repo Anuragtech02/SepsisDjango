@@ -34,61 +34,40 @@
 <body>
     <!--BODY-->
     <!--NAVIGATION BAR-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3" id="navBar">
-        <a href="#" class="navbar-brand" target="_blank"><img src="/img/favicon512.png" alt="" width="48px" height="auto"/>&nbsp;{% trans "SLAY-SEPSIS" %}</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarMenu">
-            
-            <ul class="navbar-nav ml-auto">
-                <!--<li class="nav-item">
-                    <a href="/html/login.html" class="nav-link" target="_blank"><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a>
-                </li>
-                <li class="nav-item" id="sep"> <a href="#" class="nav-link">|</a></li>
-                <li class="nav-item">
-                    <a href="/html/registration.html" class="nav-link" target="_blank"><i class="far fa-id-badge"></i>&nbsp; Registration</a>
-                </li>-->
-                <li class="nav-item mx-3 ">
-                    <div class="dropdown color_">
-                        <a class="btn text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <p class="font-weight-bolder color_">{% trans "Doctor" %}</p>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button type="button" onclick="location.href='{% url 'signIn' %}'" class="dropdown-item">{% trans "Login" %}</button>
-                        <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'signup' %}'" class="dropdown-item" >{% trans "Registration" %}</a>
-                    
-                      </div>
-                </li>
-                <li class="nav-item" id="sep"> <a href="#" class="nav-link">|</a></li>
-                <li class="nav-item mx-3 ">
-                    <div class="dropdown color_">
-                        <a class="btn color_ text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="font-weight-bolder color_">{% trans "Patient" %}</p>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button type="button" onclick="location.href='{% url 'patsignIn' %}'" class="dropdown-item">{% trans "Login" %}</button>
-                        <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'patsignup' %}'" class="dropdown-item" >{% trans "Registration" %}</button>
-                        </div>
-                      </div>
-                </li>
-            </ul>
+    <div class="navbar">
+        <div class="logo">
+            <h3>SEPSIS</h3>
         </div>
-    </nav>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-        <li class="breadcrumb-item"><button type="button" onclick="location.href='{% url 'hom' %}'" >{% trans "Home" %}</button></li>
-        <li class="breadcrumb-item active" aria-current="page">{% trans "Registration" %}</li>
-        </ol>
-    </nav>
+        <div class="containerNav">
+            <a href="#home">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Doctor
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Patient
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content dropdown-content-p">
+                    <a href="patient/sign">Login</a>
+                    <a href="patient/signup">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--NAVIGATION BAR ENDS-->
     <!--FORM STARTS-->
-<div class="container p-4 d-flex justify-content-center">
-    <div class="row "> 
-    <form action="postsignup" method="post" class="main-form needs-validation border border-dark p-4 rounded color shadow " id="user-form" novalidate>
-            {% csrf_token %}
+    <div class="container p-4 d-flex justify-content-center>
+        <div class=" row ">
+        <form action=" postsignup" method="post"
+        class="main-form needs-validation border border-dark p-4 rounded color shadow box" id="user-form" novalidate>
+        {% csrf_token %}
         <div class="col-sm-12 ">
             <div class="form-group">
                 <!-- NAME-->
@@ -101,7 +80,7 @@
             </div>
         </div>
         <!--EMAIL-->
-        
+
         <div class="form-group col-sm-12 col-md-12">
             <label for="email" class="lead font-weight-normal">{% trans "Username" %}</label>
             <input type="email" name="email" id="username" class="form-control" required>
@@ -114,7 +93,7 @@
             <div class="invalid-feedback">{% trans " Please enter a valid password." %}</div>
             <small class="form-text text-muted smute">{% trans " Please enter your password." %}</small>
         </div>
-       
+
         <!--GENDER-->
         <div class="row px-3">
             <div class="form-group col-sm-12 col-md-12">
@@ -126,50 +105,45 @@
                 </select>
                 <small class="form-text text-muted smute">{% trans " Please enter your Gender." %}</small>
             </div>
-        <!--MOBILE-NUMBER-->
-        <div class="form-group col-sm-12 px-3">
-            <label for="number"></label class="lead font-weight-normal">{% trans "Mobile Number" %}</label>
-            <input type="number" name="number" id="mobno" class="form-control" placeholder="+91 97845****12" required>
-            <small class="form-text text-muted smute">{% trans " Please enter your Contact number." %}</small>
+            <!--MOBILE-NUMBER-->
+            <div class="form-group col-sm-12 px-3">
+                <label for="number"></label class="lead font-weight-normal">{% trans "Mobile Number" %}</label>
+                <input type="number" name="number" id="mobno" class="form-control" placeholder="+91 97845****12"
+                    required>
+                <small class="form-text text-muted smute">{% trans " Please enter your Contact number." %}</small>
+            </div>
         </div>
-        </div>
-    
-            
+
+
         <br>
         <!--*************Major Details ENDS***************************-->
         <div class="form-check">
             <input type="checkbox" id="accept-terms" class="form-check-input">
-            <label for="accept-terms" class="form-check-label">{% trans "Accept Terms" %} &amp; {% trans "Conditions" %}</label>
+            <label for="accept-terms" class="form-check-label">{% trans "Accept Terms" %} &amp;
+                {% trans "Conditions" %}</label>
         </div>
-    
+
         <br>
         <!--SUBMIT BUTTON-->
-        <div class="d-flex justify-content-center col-sm-12 " > <button type="submit" class="btn border-dark mr-3 px-4 btn-primary btn-lg " id="submit-btn">
-           {% trans "Submit" %}
-        </button>
-        <button type="button" class="btn btn-dark border-light btn-lg ml-3 px-4 " id="submit-btn" onclick="location.href='{% url 'mehra' %}'">
-            Face capturing
-        </button></div>
-    </form>
+        <div class="d-flex justify-content-center col-sm-12 "> <button type="submit"
+                class="btn border-dark mr-3 px-4 btn-primary btn-lg " id="submit-btn">
+                {% trans "Submit" %}
+            </button>
+            <button type="button" class="btn btn-dark border-light btn-lg ml-3 px-4 " id="submit-btn"
+                onclick="location.href='{% url 'mehra' %}'">
+                Face capturing
+            </button></div>
+        </form>
     </div>
-</div>
-</div>
-<!--END OF ROW-->    
-</div>
-<!--END OF CONTAINER-->
-<!--FOOTER-HERE-->
-<footer class="footer text-center bg-dark text-light p-4 col-sm-12">
-    <p>@CopyRight 2020 SIH SourceDeCode</p>
-</footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-   <script src="{% static '/js/registration.js' %}"></script>
+    </div>
+    </div>
+    <!--END OF ROW-->
+    </div>
+    <!--END OF CONTAINER-->
+    <!--FOOTER-HERE-->
+    <div class="footer">
+        <p>© Copyright 2020 SourceDecode SIH</p>
+    </div>
 </body>
 
 </html>
