@@ -139,3 +139,58 @@ body{
      box-shadow:  0 3px 8px 0 #b8b8b8;
      padding: 10px;
     }
+    .cardBack{
+        display: block;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .form-control{
+        border-color: rgba(97, 94, 94, 0.884);
+    }
+     .loginButton{
+       margin-left: -1px;
+       
+    }
+    .buttonLogin{
+        width:100px;
+        font-weight: bold;
+    }
+    .faceButton{
+        margin-left: 20px;
+        margin-top: 0px;
+        
+     }
+     .buttonFace{
+         width:200px;
+         height:40px;
+         padding-top: 5px;
+         font-weight: ;
+
+     }
+     .formgroupbuttons{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .display3{
+         font-size: 45px;
+         font-weight: bold;
+         text-align: center;
+     }
+     
+.footer{
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+  
+  }
+  
