@@ -1,35 +1,51 @@
+
 body{
-    background-image: linear-gradient(#417EB0, #5354A0);
+    background-image: url(/static/img/signupbg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
 }
 
-#user-form{
-    -webkit-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-    -moz-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-    box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-}
+
+
 
 /*#submit-btn{
     background-color: rgb(26, 171, 219);
 }*/
-.box{
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+.containerBox{
+  display: flex;
+  justify-content: left;
 }
+
+.containerHeading {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.box{
+    border-radius: 10px;
+    width:700px;
+    margin-left: 150px;
+    margin-top:20px;
+
+}
+
+.containerName, .containerPass, .containerGM, .containerRules{
+  display: flex;    
+  justify-content: space-evenly;  
+}
+
 .footer{
 
     width:100%;
     background-color: rgb(66, 66, 66);
     color: white;
     padding: 20px;
+    padding-bottom: 10px;
     padding-right: 0px;
-    text-align: center;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -38,9 +54,9 @@ body{
   }
 .navbar {
     background-color: white;
-    display: flex;
-   
-    
+    display: flex;   
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+
   }
 
   .containerNav{

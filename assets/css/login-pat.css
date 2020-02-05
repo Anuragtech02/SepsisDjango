@@ -1,8 +1,10 @@
-body{
-    background-image: linear-gradient(#417EB0, #5354A0);
+body {
+  background-image: url(/static/img/loginbg.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: Arial, Helvetica, sans-serif; 
 }
+
 
 /*.trans{
     /*opacity: 0%;
@@ -46,6 +48,12 @@ body{
     text-decoration: none;
   }
   
+  .containerBox{
+    display: flex;
+    align-items: left;
+    margin-left: 100px;
+    margin-top: 60px;
+  }
   .card:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
@@ -57,6 +65,7 @@ body{
    }
     .navbar {
       background-color: white;
+      box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2);
       display: flex;
       position:sticky;
       top:0px;
@@ -116,12 +125,7 @@ body{
       display: flex;
       text-align: left;
     }
-    body {
-    background-image: linear-gradient(#417EB0, #5354A0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif; 
-  }
+  
     
     .dropdown-content a:hover {
       background-color: #ddd;
@@ -183,14 +187,15 @@ body{
      
 .footer{
 
+  position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(66, 66, 66);
     color: white;
     padding: 20px;
+    padding-bottom: 10px;
     text-align: center;
-    position: fixed;
-  
   }
+  
   

@@ -66,33 +66,35 @@
 <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
 <!--LOGIN FORM-->
     <br>
-<div class="container login-container trans" id="bg" >
-    <div class="row " >
-        <div class="cardBack">
-        <div class=""  id="user-form">
-            
-            <h3 class="display3">{% trans "Patient Login" %}</h3>
-            <form action="postsign" method="post">
-                {% csrf_token %}
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email" value="" name=email />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Your Password" value="" name=password />
-                </div>
+    <div class="containerLogin">
+      <div class="container login-container trans containerBox" id="bg" >
+          <div class="row " >
+              <div class="cardBack">
+              <div class=""  id="user-form">
+                  
+                  <h3 class="display3">{% trans "Patient Login" %}</h3>
+                  <form action="postsign" method="post">
+                      {% csrf_token %}
+                      <div class="form-group">
+                          <input type="email" class="form-control" placeholder="Your Email" value="" name=email />
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Your Password" value="" name=password />
+                      </div>
 
 
-                <div class="formgroupbuttons">
-                    <div class="loginButton"><input type="submit" class="btnSubmit btn btn-primary buttonLogin" value="Login" /></div><br><br><br>
-                    <div class="faceButton"><button type="button" class="btn btn-dark   border-light btn-lg  buttonFace" id="submit-btn" onclick="location.href='{% url 'naman' %}'">
-                        Face recognition
-                    </button>
-                </div>
-            </form>
-            </div>
-        </div>
+                      <div class="formgroupbuttons">
+                          <div class="loginButton"><input type="submit" class="btnSubmit btn btn-primary buttonLogin" value="Login" /></div><br><br><br>
+                          <div class="faceButton"><button type="button" class="btn btn-dark   border-light btn-lg  buttonFace" id="submit-btn" onclick="location.href='{% url 'naman' %}'">
+                              Face recognition
+                          </button>
+                      </div>
+                  </form>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
-</div>
 
 
 <!--~~~~~~~~~~~~~~~FOOTER-HERE~~~~~~~~~~~~-->
