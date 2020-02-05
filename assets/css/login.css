@@ -1,123 +1,201 @@
-body{
-  /*  background: url(/static/img/tech-health.jpg) no-repeat ;*/
-    min-height: calc(100vh- 138px);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+body {
+    background-image: url(/static/img/loginbg.svg);
     background-repeat: no-repeat;
-    position: relative;
-}
-
-#bg{
-   /* background: url(/assets/img/health.jpg) no-repeat ;*/
-    min-height: calc(100vh- 138px);
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-
-/*.trans{
-    /*opacity: 0%;
-}*/
-
-
-.login-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-}
-
-.login-logo{
-    width: 75%;
-    position: relative;
-    margin-left: 34%;
-    margin-top: 3vh;
-}
-
-.login-logo img{
-    position: absolute;
-    width: 40%;
-    margin-top: -66.5%;
-    background: #282726;
-    border-radius: 4.5rem;
-    padding: 5%;
+    font-family: Arial, Helvetica, sans-serif; 
+  }
+  
+  
+  /*.trans{
+      /*opacity: 0%;
+  }*/
+  
+    /* Remove extra left and right margins, due to padding in columns */
+    .row 
+    {
+      margin: 0 -5px; 
+      margin-top: 50px;
+      align-items:center;
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 100px;
     }
-
-
-
-.login-form-2{
-    padding: 9%;
-    background: #fa8334;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-}
-.login-form-2 h3{
-    text-align: center;
-    margin-bottom:12%;
-    color: #fff;
-}
-.btnSubmit{
-    font-weight: 600;
-    width: 50%;
-    color: #282726;
-    background-color: #fff;
-    border: none;
-    border-radius: 1.5rem;
-    padding:2%;
-    margin-left: 23%;
-}
-.btnForgetPwd{
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-@media /*for mobile*/screen and (max-width: 768px) {
-
-    /*#content-mobile {display: none;}*/
-    #user-form{ margin-left: 1px;
-                margin-right: 1px;
+    a:hover{
+        text-decoration:none;
     }
-    .login-logo{
-        position: relative;
-        margin-left: 38%;
+    
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+      transition:0.3s;
+    }
+    
+    .card a {
+      margin-top:15px;
+      text-align: center;
+      color : black;  
+      text-decoration: none;
+    }
+    
+    .containerBox{
+      display: flex;
+      align-items: left;
+      margin-left: 100px;
+      margin-top: 60px;
+    }
+    .card:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+     .card a {
+       margin-top:15px;
+       text-align: center;
+       color : black;  
+       text-decoration: none;
+     }
+      .navbar {
+        background-color: white;
+        box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2);
+        display: flex;
+        position:sticky;
+        top:0px;
         
-    }
-    .login-logo img{
+      }
+    
+      .containerNav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        right : 0;
+      }
+      
+      .navbar a {
+        float: right;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .dropdown {
+        float: right;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color:  rgb(68, 159, 233);
+      }
+      
+      .dropdown-content {
+        display: none;
         position: absolute;
-        width: 40%;
-        margin-top: -38%;
-        background: #282726;
-        border-radius: 4.5rem;
-        padding: 5%;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+    
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        text-align: left;
+      }
+    
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        display:block;
+        
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display:block;
+      }
+    
+      .languageSelect{
+        display: flex;
+       background-color: white;
+       box-shadow:  0 3px 8px 0 #b8b8b8;
+       padding: 10px;
+      }
+      .cardBack{
+          display: block;
+          margin: auto;
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .form-control{
+          border-color: rgba(97, 94, 94, 0.884);
+      }
+       .loginButton{
+         margin-left: -1px;
+         
+      }
+      .buttonLogin{
+          width:100px;
+          font-weight: bold;
+      }
+      .faceButton{
+          margin-left: 20px;
+          margin-top: 0px;
+          
+       }
+       .buttonFace{
+           width:200px;
+           height:40px;
+           padding-top: 5px;
+           font-weight: ;
+  
+       }
+       .formgroupbuttons{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .display3{
+           font-size: 45px;
+           font-weight: bold;
+           text-align: center;
+       }
+       
+  .footer{
+  
+    position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(66, 66, 66);
+      color: white;
+      padding: 20px;
+      padding-bottom: 10px;
+      text-align: center;
     }
     
     
-    }
-
-#user-form{
-    -webkit-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-    -moz-box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-    box-shadow: 0px 8px 29px 12px rgba(0,0,0,0.51);
-    }
-    @media screen and (max-width: 576px) {
-        #sep{display: none;}
-        
-        }
-@media screen and (min-width: 576px) {
-            #search{display: none;}
-        }
-        
-.btnSubmit:hover.btnForgetPwd:hover,input:hover,.btnForgetPwd:hover,img:hover{
-
-    -webkit-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-}
-.btnSubmit:focus.btnForgetPwd:focus,input:focus,.btnForgetPwd:focus,img:focus{
-    -webkit-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.75);
-}

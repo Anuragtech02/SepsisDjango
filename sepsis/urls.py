@@ -20,12 +20,13 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.home,name="hom" ),
+    path("home",views.home,name="hom" ),
     path('staff/', include('staff.urls')),
     path('patient/', include('patient.urls')),
     path('i18n/',include('django.conf.urls.i18n')),
     path("prevention",views.p),
-    path("sirs",views.s)
+    path("sirs",views.s),
+    path("",views.a)
     
 
     

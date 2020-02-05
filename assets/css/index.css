@@ -1,188 +1,238 @@
-*{
-    margin:0;
-    padding:0;
-}
-
-
-@media screen and (max-width: 576px) {
-    #sep{display: none;}
-
-    body{
-        background: url(/static/img/eme.jpg) no-repeat ;
-        min-height: calc(100vh- 138px);
-        background-size: cover;
-        background-position: right;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-    }
-
-    .title{
-        -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        border-radius: 40px;
-        font-size: 3.1rem;
-        margin-bottom: 35px !important;
-    }
-    .under{
-        border: 2px solid #543ee4c0 ;
-    }
-    .ban-btn:hover{
-        background-color: #8377d1 ;
-        border-radius: 30px;
-        color: #ffffff;
-        font-weight: 550;
-            
-    }
-    /*.max-height{
-        min-height: 60vh;
-        background: url("/static/img/gen-bg.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }*/
-    
-    
-@media screen and (min-width: 576px) {
-        #search{display: none;}
-    
-    }
-
-
-@media screen and (min-width:768px){
-footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
-    position: relative;
-    
-}
-}
-#NAVBAR{
-    position: sticky;
-}
-/*-------*-*-*-*-*-*-*-*-*-------------*/
-/*.max-height{
-    min-height:calc(100vh - 138px);
-    background: url("/img/gen-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+body {
+    background-image: url(/static/img/homebg.jpg);
     background-repeat: no-repeat;
-    position: relative;
-}*/
-
-
-.text-purp{
-    color: #060127 ;
-    font-weight: 550;
-    font-size: large;
-}
-.bg-grn{
-    background-color: #24ff66;
-}
-.ban-btn{
-    min-width: 135px;
-    padding:3px;
-    border:2px solid #000000;
-    opacity: 80%;
-    border-radius: 0 ;
-    -webkit-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-    box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-    text-decoration: none;
-
-}
-
-/*
-.ban-btn:hover{
-    background-color: #8377d1 ;
-    border-radius: 30px;
-    color: #ffffff;
-    font-weight: 550;
-    
-}*/
-.ban-btn>a{
-    text-decoration: none;
-}
-
-/*#pre{
-    min-width: 145px;
-}*/
-.under{
-    width: 300px;
-    height: 8px;
-    /*border-radius: 6px;*/
-    -webkit-box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
-    box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
-
-}
-.bg-purp{
-    background-color: rebeccapurple ;
-    align-content: center;
-    
-}
-.title{
-    border-radius: 40px;
-
-}
-.title > strong{
-    -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-    border-radius: 40px;
-
-}
-
-
-@media screen and (min-width: 576px){
-
-    .banner-link{width:100% ;}
-
-    .ban-btn{
-        min-width: 110px;
-        padding:2px;
-        border:2px solid #000000;
-        opacity: 75%;
-        border-radius: 0 ;
-        -webkit-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-        -moz-box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-        box-shadow: -1px 10px 20px 6px rgba(0,0,0,0.75);
-        text-decoration: none;
-    
-    }
-    .ban-btn>a{
-        text-decoration: none;
-
-    }
-
-
-    .title > strong{
-        -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
-        border-radius: 40px;
-
-    }
-    .ban-btn:hover{
-        background-color: #8377d1 ;
-        border-radius: 40px;
-        color: #ffffff;
-        font-weight: 550;
-        
-    }
-    .max-height{
-        min-height:calc(100vh - 138px);
-        background: url(/static/img/gen-bg.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-}
-
-.slide-and-fade-and-spin {
-    @include mui-animation(slide, fade, spin(120deg));
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif; 
   }
+  
+  .logo h3{
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+  }
+  
+  /*.trans{
+      /*opacity: 0%;
+  }*/
+  
+    /* Remove extra left and right margins, due to padding in columns */
+    .row 
+    {
+      margin: 0 -5px; 
+      margin-top: 50px;
+      align-items:center;
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 100px;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    
+    .buttonLogin, .buttonSignup{
+        background-color: rgb(175, 53, 120);
+    }
+
+    .headerSepsis{
+        display: flex;
+        justify-content: center;
+        margin-top: 170px;
+    }
+
+    .containerButton{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 10%;
+    }
+    .headerSepsis h2{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        color: white; 
+        letter-spacing: 2px;
+        font-size: 70px;
+    }
+    .containerPara{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        width: 30%;
+        text-align: center;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+      transition:0.3s;
+    }
+    
+    .card a {
+      margin-top:15px;
+      text-align: center;
+      color : black;  
+      text-decoration: none;
+    }
+    
+    .containerBox{
+      display: flex;
+      align-items: left;
+      margin-left: 100px;
+      margin-top: 60px;
+    }
+    .card:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+     .card a {
+       margin-top:15px;
+       text-align: center;
+       color : black;  
+       text-decoration: none;
+     }
+      .navbar {
+        background-color: white;
+        box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2);
+        display: flex;
+        position:sticky;
+        top:0px;
+        
+      }
+    
+      .containerNav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        right : 0;
+      }
+      
+      .navbar a {
+        float: right;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .dropdown {
+        float: right;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color:  rgb(68, 159, 233);
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+    
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        text-align: left;
+      }
+    
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        display:block;
+        
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display:block;
+      }
+    
+      .languageSelect{
+        display: flex;
+       background-color: white;
+       box-shadow:  0 3px 8px 0 #b8b8b8;
+       padding: 10px;
+      }
+      .cardBack{
+          display: block;
+          margin: auto;
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .form-control{
+          border-color: rgba(97, 94, 94, 0.884);
+      }
+       .loginButton{
+         margin-left: -1px;
+         
+      }
+      .buttonLogin{
+          width:100px;
+          font-weight: bold;
+      }
+      .faceButton{
+          margin-left: 20px;
+          margin-top: 0px;
+          
+       }
+       .buttonFace{
+           width:200px;
+           height:40px;
+           padding-top: 5px;
+           font-weight: ;
+  
+       }
+       .formgroupbuttons{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .display3{
+           font-size: 45px;
+           font-weight: bold;
+           text-align: center;
+       }
+       
+  .footer{
+  
+    position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(66, 66, 66);
+      color: white;
+      padding: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    
+    

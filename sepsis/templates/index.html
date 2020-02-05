@@ -1,9 +1,7 @@
 {% load static %}
 {% load i18n %}
 {% if msg %}
-<script>
-  alert('{{msg}}')
-</script>
+
 {% endif %}
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +18,7 @@
 
 
   <!--CUSTOM CSS**********************************************-->
-  <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/index.css' %}" />
 
   <!--FAVICON**********************************************-->
   <link rel="icon" href="{% static '/img/favicon.ico' %}" />
@@ -38,8 +36,6 @@
 <body>
   <!--BODY-->
 
-
-
   <div class="navbar">
     <div class="logo">
       <h3>SEPSIS</h3>
@@ -51,7 +47,8 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="">Logout</a>
+          <a href="staff/sign">Login</a>
+          <a href="staff/signup">Register</a>
         </div>
       </div>
 
@@ -60,7 +57,7 @@
           <i  class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content dropdown-content-p">
-          <a href="patient/sign">Register</a>
+          <a href="patient/sign">Login</a>
         </div>
       </div>
     </div>
@@ -86,42 +83,25 @@
       <input type="submit" value="go">
     </form>
 
-    <h1 class="headerSepsis ">
-      <strong class=" px-3 py-1 ">{% trans "DASHBOARD" %} </strong>
-    </h1>
-
-    <div class="row">
-      <div id="Prescription" class="column">
-        <div id="subPrescription" class="card">
-          <img class="imgPrevention" src="{% static '/img/medicalPrescription.svg' %}" alt="Prescription" style="width:42%">
-          <a href="prevention"><h4><b>{% trans "PREVENTIONS" %}</b></h4></a>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img class="imgCure" src="{% static '/img/cure.svg' %}" alt="cure" style="width:40%">
-          <a href="prevention"><h4><b>{% trans "CURE" %}</b></h4></a>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img class="imgSirs" src="{% static '/img/Bacteria.svg' %}" alt="sirs" style="width:48%">
-          <a href="prevention"><h4><b>{% trans "SIRS" %}</b></h4></a>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img class="imgSofa" src="{% static '/img/list.svg' %}" alt="cure" style="width:45% ;">
-          <a href="prevention"><h4><b>{% trans "PATIENT LIST" %}</b></h4></a>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          </div>
-      </div>
-      
+    <div class="headerSepsis ">
+      <h2>{% trans "SEPSIS" %}</h2>
     </div>
-
+    <div class="containerPara">
+        <p>Sepsis is the body’s overwhelming and life-threatening response to infection that can lead to tissue damage, organ failure, and death. In other words, it’s your body’s overactive and toxic response to an infection.</p>
+    </div>
+    <div class="containerButton">
+        <div class="d-flex justify-content-center col-sm-12 "> <button type="submit"
+            class="btn border-dark mr-3 px-4 btn-primary btn-lg  buttonLogin" id="submit-btn">
+            {% trans "Login" %}
+        </button>
+        </div>
+        <div class="d-flex justify-content-center col-sm-12"> <button type="submit"
+            class="btn border-dark mr-3 px-4 btn-primary btn-lg  buttonSignup" id="submit-btn">
+            {% trans "Signup" %}
+        </button>
+        </div>
+    </div>
+    
   </section>
   <!--END OF BANNER-->
 
